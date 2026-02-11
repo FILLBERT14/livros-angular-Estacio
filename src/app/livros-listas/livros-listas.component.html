@@ -1,0 +1,48 @@
+<div class="container mw-100 p-1 m-1">
+  <p class="h3">Catálogos de Livros</p>
+
+  <main class="w-100">
+    <div *ngFor="let livro of livros" class="mb-1 p-1 border" >
+
+      <ul class="listas list-unstyled d-flex">
+
+        <li class="titulo">
+          <p class="bg-dark text-light p-1">Título</p>
+          <div class="p-1">
+            {{ livro.titulo }}
+          </div>
+           <button
+        class="btn btn-danger btn-sm mt-3"
+        (click)="excluir(livro.codigo)"
+      >
+        Excluir
+      </button>
+        </li>
+
+        <li class="w-100">
+          <p class="bg-dark text-light p-1">Resumo</p>
+          <div class=" p-1">
+            {{ livro.resumo }}
+          </div>
+        </li>
+
+        <li class="editora">
+          <p class="bg-dark text-light p-1">Editora</p>
+          <div class="p-1">
+            {{ obterNome(livro.codEditora) }}
+          </div>
+        </li>
+
+        <li class=" autores ">
+          <p class="bg-dark text-light p-1">Autores</p>
+          <div class="p-1">
+            {{ livro.autores.join(', ') }}
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </main>
+</div>

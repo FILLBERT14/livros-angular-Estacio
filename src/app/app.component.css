@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+}
+.navbar-nav{
+    gap: initial;
+    flex-direction: initial;
+}
