@@ -8,3 +8,6 @@ height: 300px;
 .titulo {
     min-width: 150px;
 }
+ul {
+    max-height: 120px;
+}
